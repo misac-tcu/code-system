@@ -37,7 +37,7 @@
 				<td id="cs-version"></td>
 			<tr>
 			<tr>
-				<td>Name<:/td>
+				<td>Name</td>
 				<td id="cs-name"></td>
 			<tr>
 			<tr>
@@ -191,7 +191,9 @@
 					}
 				]
 			};
-			
+		
+		var json_url= 'https://misac-tcu.github.io/code-system/json/body-site.json';
+		var excell_url= 'https://docs.google.com/spreadsheets/d/1CrBBbrCsBRkwhI7Gwir0stUhzlMvDGT9suCXceqaRko/edit?usp=sharing';
 		document.getElementById("cs-header").innerHTML+= CodeSystem.name;
 		document.getElementById("cs-publisher").innerHTML+= CodeSystem.publisher;
 		document.getElementById("cs-url").innerHTML= CodeSystem.url;
@@ -200,7 +202,7 @@
 		document.getElementById("cs-title").innerHTML= CodeSystem.title;
 		document.getElementById("cs-status").innerHTML= CodeSystem.status;
 		document.getElementById("cs-description").innerHTML= CodeSystem.description;
-		document.getElementById("cs-source-resource").innerHTML= "json";
+		document.getElementById("cs-source-resource").innerHTML= " <a href='" + json_url + "'>json</a> | <a href='" + excell_url + "'>excell</a>";
 		
 		var table = document.getElementById("cs-content");
 		for (var i=0;i< CodeSystem.count ; i++)
