@@ -1,0 +1,218 @@
+<html>
+
+<head>
+    <style>
+		table {
+			margin: 0px 10px 10px 10px;
+		}
+		
+        table,
+        tr,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+	<h1 id="cs-header">Code System </h1>
+	<p id="cs-publisher">This is a code system defined by the </p>
+
+	<div id="cs-summary">
+		<h2>Summary</h2>
+		<table align="left" id="cs-info">
+			<tr>
+				<td>Defining URL:</td>
+				<td id="cs-url"></td>
+			<tr>
+			<tr>
+				<td>Version:</td>
+				<td id="cs-version"></td>
+			<tr>
+			<tr>
+				<td>Name<:/td>
+				<td id="cs-name"></td>
+			<tr>
+			<tr>
+				<td>Title:</td>
+				<td id="cs-title"></td>
+			<tr>
+			<tr>
+				<td>Status:</td>
+				<td id="cs-status"></td>
+			<tr>
+			<tr>
+				<td>Definition:</td>
+				<td id="cs-description"></td>
+			<tr>
+			<tr>
+				<td>Source Resource:</td>
+				<td id="cs-source-resource"></td>
+			<tr>
+		</table>
+	</div>
+	
+	<div>
+		<h2>Content</h2>
+		<p>This code system <a href="" target="blank" id="cs-url"></a> defines the following codes:</p>
+		<form id="mass" name="mass" style="text-align: center">
+			<table align="center" id="cs-content">
+				<tr>
+					<th>Code</th>
+					<th>Display</th>
+					<th>Definition</th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+	<script>
+		var CodeSystem=
+			{
+				"resourceType": "CodeSystem",
+				"id": "body-site",
+				"url": "https://misac-tcu.github.io/code-system/body-site.html",
+				"identifier": {
+					"system": "https://misac-tcu.github.io/code-system/body-site.html",
+					"value": "body-site"
+				},
+				"version": "0.1.0",
+				"name": "body-site",
+				"title": "Code system for body site location",
+				"status": "draft",
+				"date": "2022-09-01T00:00:00+11:00",
+				"publisher": "Medical Informatics Standard Application Consortium (MISAC)",
+				"contact": [
+					{
+						"telecom": [
+							{
+								"system": "url",
+								"value": "https://misac-tcu.github.io/contact-us"
+							}
+						]
+					}
+				],
+				"description": "Limbs or other portions of the anatomy that are removed from a person or human remains for medical purposes during treatment.",
+				"caseSensitive": true,
+				"content": "complete",
+				"count": 17,
+				"concept": [
+					{
+					"code": "abdomen",
+					 "display": "Abdomen",
+					 "definition": "Abdomen"
+					},
+					{
+					"code": "upper-extremity-left",
+					 "display": "Upper Extremity-Left",
+					 "definition": "Upper Extremity-Left"
+					},
+					{
+					"code": "upper-extremity-right",
+					 "display": "Upper Extremity-Right",
+					 "definition": "Upper Extremity-Right"
+					},
+					{
+					"code": "lower-extremity-left",
+					 "display": "Lower Extremity-Left",
+					 "definition": "Lower Extremity-Left"
+					},
+					{
+					"code": "lower-extremity-right",
+					 "display": "Lower Extremity-Right",
+					 "definition": "Lower Extremity-Right"
+					},
+					{
+					"code": "chest",
+					 "display": "Chest",
+					 "definition": "Chest"
+					},
+					{
+					"code": "head",
+					 "display": "Head",
+					 "definition": "Head"
+					},
+					{
+					"code": "pelvis",
+					 "display": "Pelvis",
+					 "definition": "Pelvis"
+					},
+					{
+					"code": "stomach",
+					 "display": "Stomach",
+					 "definition": "Stomach"
+					},
+					{
+					"code": "eye-left",
+					 "display": "Eye-left",
+					 "definition": "Eye-left"
+					},
+					{
+					"code": "eye-right",
+					 "display": "Eye-right",
+					 "definition": "Eye-right"
+					},
+					{
+					"code": "liver",
+					 "display": "Liver",
+					 "definition": "Liver"
+					},
+					{
+					"code": "pancreas",
+					 "display": "Pancreas",
+					 "definition": "Pancreas"
+					},
+					{
+					"code": "kidney",
+					 "display": "Kidney",
+					 "definition": "Kidney"
+					},
+					{
+					"code": "breast",
+					 "display": "Breast",
+					 "definition": "Breast"
+					},
+					{
+					"code": "spine",
+					 "display": "Spine",
+					 "definition": "Spine"
+					},
+					{
+					"code": "skull",
+					 "display": "Skull",
+					 "definition": "Skull"
+					}
+				]
+			};
+			
+		document.getElementById("cs-header").innerHTML+= CodeSystem.name;
+		document.getElementById("cs-publisher").innerHTML+= CodeSystem.publisher;
+		document.getElementById("cs-url").innerHTML= CodeSystem.url;
+		document.getElementById("cs-version").innerHTML= CodeSystem.version;
+		document.getElementById("cs-name").innerHTML= CodeSystem.name;
+		document.getElementById("cs-title").innerHTML= CodeSystem.title;
+		document.getElementById("cs-status").innerHTML= CodeSystem.status;
+		document.getElementById("cs-description").innerHTML= CodeSystem.description;
+		document.getElementById("cs-source-resource").innerHTML= "json";
+		
+		var table = document.getElementById("cs-content");
+		for (var i=0;i< CodeSystem.count ; i++)
+		{
+			var row = table.insertRow(-1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML = CodeSystem.concept[i].code;
+			cell2.innerHTML = CodeSystem.concept[i].display;
+			cell3.innerHTML = CodeSystem.concept[i].definition;
+		}
+	</script>
+</body>
+</html>

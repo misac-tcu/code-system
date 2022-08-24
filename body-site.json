@@ -1,0 +1,116 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "body-site",
+	"url": "https://misac-tcu.github.io/code-system/body-site.html",
+	"identifier": {
+		"system": "https://misac-tcu.github.io/code-system/body-site.html",
+		"value": "body-site"
+	},
+	"version": "0.1.0",
+	"name": "body-site",
+	"title": "Code system for body site location",
+	"status": "draft",
+	"date": "2022-09-01T00:00:00+11:00",
+	"publisher": "Medical Informatics Standard Application Consortium (MISAC)",
+	"contact": [
+		{
+			"telecom": [
+				{
+					"system": "url",
+					"value": "https://misac-tcu.github.io/contact-us"
+				}
+			]
+		}
+	],
+	"description": "Limbs or other portions of the anatomy that are removed from a person or human remains for medical purposes during treatment.",
+	"caseSensitive": true,
+	"content": "complete",
+	"count": 17,
+	"concept": [
+		{
+		"code": "abdomen",
+		 "display": "Abdomen",
+		 "definition": "Abdomen"
+		},
+		{
+		"code": "upper-extremity-left",
+		 "display": "Upper Extremity-Left",
+		 "definition": "Upper Extremity-Left"
+		},
+		{
+		"code": "upper-extremity-right",
+		 "display": "Upper Extremity-Right",
+		 "definition": "Upper Extremity-Right"
+		},
+		{
+		"code": "lower-extremity-left",
+		 "display": "Lower Extremity-Left",
+		 "definition": "Lower Extremity-Left"
+		},
+		{
+		"code": "lower-extremity-right",
+		 "display": "Lower Extremity-Right",
+		 "definition": "Lower Extremity-Right"
+		},
+		{
+		"code": "chest",
+		 "display": "Chest",
+		 "definition": "Chest"
+		},
+		{
+		"code": "head",
+		 "display": "Head",
+		 "definition": "Head"
+		},
+		{
+		"code": "pelvis",
+		 "display": "Pelvis",
+		 "definition": "Pelvis"
+		},
+		{
+		"code": "stomach",
+		 "display": "Stomach",
+		 "definition": "Stomach"
+		},
+		{
+		"code": "eye-left",
+		 "display": "Eye-left",
+		 "definition": "Eye-left"
+		},
+		{
+		"code": "eye-right",
+		 "display": "Eye-right",
+		 "definition": "Eye-right"
+		},
+		{
+		"code": "liver",
+		 "display": "Liver",
+		 "definition": "Liver"
+		},
+		{
+		"code": "pancreas",
+		 "display": "Pancreas",
+		 "definition": "Pancreas"
+		},
+		{
+		"code": "kidney",
+		 "display": "Kidney",
+		 "definition": "Kidney"
+		},
+		{
+		"code": "breast",
+		 "display": "Breast",
+		 "definition": "Breast"
+		},
+		{
+		"code": "spine",
+		 "display": "Spine",
+		 "definition": "Spine"
+		},
+		{
+		"code": "skull",
+		 "display": "Skull",
+		 "definition": "Skull"
+		}
+	]
+}

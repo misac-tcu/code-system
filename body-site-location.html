@@ -1,0 +1,449 @@
+<html>
+
+<head>
+    <style>
+		table {
+			margin: 0px 10px 10px 10px;
+		}
+		
+        table,
+        tr,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        div.b {
+            position: relative;
+            left: 15px;
+        }
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+	<h1 id="cs-header">Code System </h1>
+	<p id="cs-publisher">This is a code system defined by the </p>
+
+	<h2>Summary</h2>
+	<table align="left" id="cs-info">
+		<tr>
+			<td>Defining URL:</td>
+			<td id="cs-url"></td>
+		<tr>
+		<tr>
+			<td>Version:</td>
+			<td id="cs-version"></td>
+		<tr>
+		<tr>
+			<td>Name<:/td>
+			<td id="cs-name"></td>
+		<tr>
+		<tr>
+			<td>Title:</td>
+			<td id="cs-title"></td>
+		<tr>
+		<tr>
+			<td>Status:</td>
+			<td id="cs-status"></td>
+		<tr>
+		<tr>
+			<td>Definition:</td>
+			<td id="cs-description"></td>
+		<tr>
+		<tr>
+			<td>Source Resource:</td>
+			<td id="cs-source-resource"></td>
+		<tr>
+	</table>
+	
+    <h2>Content</h2>
+    <p>This code system <a href="" target="blank" id="cs-url"></a> defines the following codes:</p>
+    <form id="mass" name="mass" style="text-align: center">
+        <table align="center" id="cs-content">
+			<tr>
+                <th>Code</th>
+                <th>Display</th>
+                <th>Definition</th>
+            </tr>
+		</table>
+    </form>
+	
+	<script>
+		var CodeSystem=
+			{
+				"resourceType": "CodeSystem",
+				"id": "body-site-location",
+				"url": "https://misac-tcu.github.io/code-system/body-site-location.html",
+				"identifier": {
+					"system": "https://misac-tcu.github.io/code-system/body-site-location.html",
+					"value": "body-site-location"
+				},
+				"version": "0.1.0",
+				"name": "body-site-location",
+				"title": "Code system for body site location",
+				"status": "draft",
+				"date": "2022-09-01T00:00:00+11:00",
+				"publisher": "Medical Informatics Standard Application Consortium (MISAC)",
+				"contact": [
+					{
+						"telecom": [
+							{
+								"system": "url",
+								"value": "https://misac-tcu.github.io/contact-us"
+							}
+						]
+					}
+				],
+				"description": "Location is describe as the point position of a mass was finding. Usually refers to the anatomical location of an organ. The goal of recording the location of the mass is that it can be used in image guided radiation oncology and surgical operation.",
+				"caseSensitive": true,
+				"content": "complete",
+				"count": 63,
+				"concept": [
+					{
+						"code": "breast-left-nipple",
+						"display": "Nipple of left breast",
+						"definition": "Nipple of left breast"
+					},
+					{
+						"code": "breast-right-nipple",
+						"display": "Nipple of right breast.",
+						"definition": "Nipple of right breast."
+					},
+					{
+						"code": "breast-left-centralportion",
+						"display": "Central portion of left breast.",
+						"definition": "Central portion of left breast."
+					},
+					{
+						"code": "breast-right-centralportion",
+						"display": "Central portion of right breast.",
+						"definition": "Central portion of right breast."
+					},
+					{
+						"code": "breast-left-uiq",
+						"display": "Upper inner quadrant of left breast.",
+						"definition": "Upper inner quadrant of left breast."
+					},
+					{
+						"code": "breast-right-uiq",
+						"display": "Upper inner quadrant of right breast.",
+						"definition": "Upper inner quadrant of right breast."
+					},
+					{
+						"code": "breast-left-liq",
+						"display": "Lower inner quadrant of left breast.",
+						"definition": "Lower inner quadrant of left breast."
+					},
+					{
+						"code": "breast-right-liq",
+						"display": "Lower inner quadrant of right breast.",
+						"definition": "Lower inner quadrant of right breast."
+					},
+					{
+						"code": "breast-left-uoq",
+						"display": "Upper outer quadrant of left breast.",
+						"definition": "Upper outer quadrant of left breast."
+					},
+					{
+						"code": "breast-right-uoq",
+						"display": "Upper outer quadrant of right breast.",
+						"definition": "Upper outer quadrant of right breast."
+					},
+					{
+						"code": "breast-left-loq",
+						"display": "Lower outer quadrant of left breast.",
+						"definition": "Lower outer quadrant of left breast."
+					},
+					{
+						"code": "breast-right-loq",
+						"display": "Lower outer quadrant of right breast.",
+						"definition": "Lower outer quadrant of right breast."
+					},
+					{
+						"code": "breast-left-axieltail",
+						"display": "Axieltail of left breast.",
+						"definition": "Axieltail of left breast."
+					},
+					{
+						"code": "breast-right-axieltail",
+						"display": "Axieltail of right breast.",
+						"definition": "Axieltail of right breast."
+					},
+					{
+						"code": "breast-left-overlapp",
+						"display": "Overlap of left breast.",
+						"definition": "Overlap of left breast."
+					},
+					{
+						"code": "breast.right.overlapp",
+						"display": "Overlap of right breast.",
+						"definition": "Overlap of right breast-"
+					},
+					{
+						"code": "breast-left.nos",
+						"display": "Not otherwise specified of left breast.",
+						"definition": "Not otherwise specified of left breast."
+					},
+					{
+						"code": "breast-right-nos",
+						"display": "Not otherwise specified of right breast.",
+						"definition": "Not otherwise specified of right breast."
+					},
+					{
+						"code": "breast-left-subareolar",
+						"display": "Subareolar of left breast.",
+						"definition": "Subareolar of left breast."
+					},
+					{
+						"code": "breast-right-subareolar",
+						"display": "Subareolar of right breast.",
+						"definition": "Subareolar of right breast."
+					},
+					{
+						"code": "liver-segment1",
+						"display": "Segment I of liver.",
+						"definition": "Segment I of liver."
+					},
+					{
+						"code": "liver-segment2",
+						"display": "Segment II of liver.",
+						"definition": "Segment II of liver."
+					},
+					{
+						"code": "liver-segment3",
+						"display": "Segment III of liver.",
+						"definition": "Segment III of liver."
+					},
+					{
+						"code": "liver-segment4a",
+						"display": "Segment IVa of liver-",
+						"definition": "Segment IVa of liver-"
+					},
+					{
+						"code": "liver-segment4b",
+						"display": "Segment IVb of liver.",
+						"definition": "Segment IVb of liver."
+					},
+					{
+						"code": "liver-segment5",
+						"display": "Segment V of liver.",
+						"definition": "Segment V of liver."
+					},
+					{
+						"code": "liver-segment6",
+						"display": "Segment VI of liver.",
+						"definition": "Segment VI of liver."
+					},
+					{
+						"code": "liver-left-lateral-sector",
+						"display": "Left lateral sector of liver.",
+						"definition": "Left lateral sector of liver."
+					},
+					{
+						"code": "liver-left-medial-sector",
+						"display": "Left medial sector of liver.",
+						"definition": "Left medial sector of liver."
+					},
+					{
+						"code": "liver-right-anterior-sector",
+						"display": "Right anterior sector of liver.",
+						"definition": "Right anterior sector of liver."
+					},
+					{
+						"code": "liver-right-posterior-sector",
+						"display": "Right posterior sector of liver.",
+						"definition": "Right posterior sector of liver."
+					},
+					{
+						"code": "liver-left-lobe",
+						"display": "Left lobe of liver.",
+						"definition": "Left lobe of liver."
+					},
+					{
+						"code": "liver-right-lobe",
+						"display": "Right lobe of liver.",
+						"definition": "Right lobe of liver."
+					},
+					{
+						"code": "liver-caudate-lobe",
+						"display": "Caudate lobe of liver.",
+						"definition": "Caudate lobe of liver."
+					},
+					{
+						"code": "liver-quadrate-lobe",
+						"display": "Quadrate lobe of liver.",
+						"definition": "Quadrate lobe of liver."
+					},
+					{
+						"code": "liver-uncertain",
+						"display": "Uncertain location of liver.",
+						"definition": "Uncertain location of liver."
+					},
+					{
+						"code": "liver-unknown",
+						"display": "Unknown location of liver.",
+						"definition": "Unknown location of liver."
+					},
+					{
+						"code": "colon-rectum",
+						"display": "Rectum.",
+						"definition": "Rectum."
+					},
+					{
+						"code": "colon-sigmoid",
+						"display": "Sigmoid colon.",
+						"definition": "Sigmoid colon."
+					},
+					{
+						"code": "colon-descending",
+						"display": "Descending colon.",
+						"definition": "Descending colon."
+					},
+					{
+						"code": "colon-transverse",
+						"display": "Transverse colon.",
+						"definition": "Transverse colon."
+					},
+					{
+						"code": "colon-ascending",
+						"display": "Ascending colon.",
+						"definition": "Ascending colon."
+					},
+					{
+						"code": "colon-cecum",
+						"display": "Cecum.",
+						"definition": "Cecum."
+					},
+					{
+					"code": "lower-extremity-left-wards-area​",
+					 "display": "Ward`s area​ of left lower extremity",
+					 "definition": "Ward`s area​ of left lower extremity"
+					},
+					{
+					"code": "lower-extremity-right-wards-area",
+					 "display": "Ward`s area​ of right lower extremity",
+					 "definition": "Ward`s area​ of right lower extremity"
+					},
+					{
+					"code": "lower-extremity-right-femoral-body",
+					 "display": "Femoral body of right lower extremity",
+					 "definition": "Femoral body of right lower extremity"
+					},
+					{
+					"code": "lower-extremity-left-femoral-body",
+					 "display": "Femoral body of left lower extremity",
+					 "definition": "Femoral body of left lower extremity"
+					},
+					{
+					"code": "lower-extremity-right-femoral-neck",
+					 "display": "Femoral neck of right lower extremity",
+					 "definition": "Femoral neck of right lower extremity"
+					},
+					{
+					"code": "lower-extremity-left-femoral-neck",
+					 "display": "Femoral neck of left lower extremity",
+					 "definition": "Femoral neck of left lower extremity"
+					},
+					{
+					"code": "lower-extremity-right-proximal-femur",
+					 "display": "Proximal femur of right lower extremity",
+					 "definition": "Proximal femur of right lower extremity"
+					},
+					{
+					"code": "lower-extremity-left-proximal-femur",
+					 "display": "Proximal femur of left lower extremity",
+					 "definition": "Proximal femur of left lower extremity"
+					},
+					{
+					"code": "spine-first-lumbar",
+					 "display": "Lumbar spine L1​",
+					 "definition": "Lumbar spine L1​"
+					},
+					{
+					"code": "spine-second-lumbar",
+					 "display": "Lumbar spine L2​",
+					 "definition": "Lumbar spine L2​"
+					},
+					{
+					"code": "spine-third-lumbar",
+					 "display": "Lumbar spine L3​",
+					 "definition": "Lumbar spine L3​"
+					},
+					{
+					"code": "spine-fourth-lumbar",
+					 "display": "Lumbar spine L4",
+					 "definition": "Lumbar spine L4"
+					},
+					{
+					"code": "spine-first-to-second-lumbar",
+					 "display": "Lumbar spine L1-L2​",
+					 "definition": "Lumbar spine L1-L2​"
+					},
+					{
+					"code": "spine-first-to-third-lumbar",
+					 "display": "Lumbar spine L1-L3​",
+					 "definition": "Lumbar spine L1-L3​"
+					},
+					{
+					"code": "spine-first-to-fourth-lumbar",
+					 "display": "Lumbar spine L1-L4​",
+					 "definition": "Lumbar spine L1-L4​"
+					},
+					{
+					"code": "spine-second-to-third-lumbar",
+					 "display": "Lumbar spine L2-L3​",
+					 "definition": "Lumbar spine L2-L3​"
+					},
+					{
+					"code": "spine-second-to-fourth-lumbar",
+					 "display": "Lumbar spine L2-L4",
+					 "definition": "Lumbar spine L2-L4"
+					},
+					{
+					"code": "spine-third-to-fourth-lumbar",
+					 "display": "Lumbar spine L3-L4",
+					 "definition": "Lumbar spine L3-L4"
+					},
+					{
+					"code": "forearm-left",
+					 "display": "Left forearm",
+					 "definition": "Left forearm"
+					},
+					{
+					"code": "forearm-right",
+					 "display": "Right forearm",
+					 "definition": "Right forearm"
+					}
+				]
+			};
+			
+		document.getElementById("cs-header").innerHTML+= CodeSystem.name;
+		document.getElementById("cs-publisher").innerHTML+= CodeSystem.publisher;
+		document.getElementById("cs-url").innerHTML= CodeSystem.url;
+		document.getElementById("cs-version").innerHTML= CodeSystem.version;
+		document.getElementById("cs-name").innerHTML= CodeSystem.name;
+		document.getElementById("cs-title").innerHTML= CodeSystem.title;
+		document.getElementById("cs-status").innerHTML= CodeSystem.status;
+		document.getElementById("cs-description").innerHTML= CodeSystem.description;
+		document.getElementById("cs-source-resource").innerHTML= "json";
+		
+		var table = document.getElementById("cs-content");
+		for (var i=0;i< CodeSystem.count ; i++)
+		{
+			var row = table.insertRow(-1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML = CodeSystem.concept[i].code;
+			cell2.innerHTML = CodeSystem.concept[i].display;
+			cell3.innerHTML = CodeSystem.concept[i].definition;
+		}
+	</script>
+</body>
+</html>
