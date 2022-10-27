@@ -1,0 +1,36 @@
+{
+	"resourceType": "CodeSystem",
+	"id": "misac.codesystem.bodysite",
+	"url": "https://misac-tcu.github.io/code-system/annotation-type.html",
+	"identifier": {
+		"system": "https://misac-tcu.github.io/code-system/annotation-type.html",
+		"value": "body-site"
+	},
+	"version": "0.1.0",
+	"name": "annotation-type",
+	"title": "Code system for annotation-type",
+	"status": "draft",
+	"date": "2022-09-01T00:00:00+11:00",
+	"publisher": "Medical Informatics Standard Application Consortium (MISAC)",
+	"contact": [
+		{
+			"telecom": [
+				{
+					"system": "url",
+					"value": "https://misac-tcu.github.io/contact-us"
+				}
+			]
+		}
+	],
+	"description": "Annotation type describes the type of both vector and text graphics used in annotating an image. The purpose of drawing annotations is to record the location of an object.",
+	"caseSensitive": true,
+	"content": "complete",
+	"count": 1,
+	"concept": [
+		{
+		"code": "svg.annotation",
+		 "display": "SVG Annotation",
+		 "definition": "Scalable Vector Graphics (SVG) define as XML format vector-based graphics for the Web."
+		}
+	]
+}

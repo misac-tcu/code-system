@@ -1,6 +1,6 @@
 {
 	"resourceType": "CodeSystem",
-	"id": "body-site-location",
+	"id": "misac.codesystem.bodysitelocation",
 	"url": "https://misac-tcu.github.io/code-system/body-site-location.html",
 	"identifier": {
 		"system": "https://misac-tcu.github.io/code-system/body-site-location.html",

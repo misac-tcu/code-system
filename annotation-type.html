@@ -83,7 +83,7 @@
 
 	<script>
 		//var json_url = 'https://misac-tcu.github.io/code-system/json/body-site-location.json';
-		getResource(FHIRServer, "CodeSystem", "/misac.codesystem.bodysitelocation", FHIRResponseType, 'displayCodeSystem');
+		getResource(FHIRServer, "CodeSystem", "/misac.codesystem.annotationtype", FHIRResponseType, 'displayCodeSystem');
 		function displayCodeSystem(responseStr) {
 			var CodeSystem = JSON.parse(responseStr);
 			var excell_url = 'https://docs.google.com/spreadsheets/d/1BWfEycGShvNJQvzQaQz7Is2cGTUL9xmfJnxysjul9KQ/edit?usp=sharing';

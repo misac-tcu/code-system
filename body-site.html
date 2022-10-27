@@ -19,131 +19,59 @@
 		}
 	</style>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<!-- JQUERY JS -->
-	<script src="setting.js"></script>
+	<!-- SETTING JS -->
+	<script src="js/setting.js"></script>
+	<!-- HTTPRequest JS -->
+	<script src="js/HTTPRequest.js"></script>
 </head>
 
 <body>
-	<div>
-		<h1 id="cs-header">Code System </h1>
-		<p id="cs-publisher">This is a code system defined by the </p>
-	</div>
+	<h1 id="cs-header">Code System </h1>
+	<p id="cs-publisher">This is a code system defined by the </p>
 
-	<div id="cs-summary">
-		<h2>Summary</h2>
-		<table align="left" id="cs-info">
+	<h2>Summary</h2>
+	<table id="cs-info" style="width: 90%;">
+		<tr>
+			<td>Defining URL:</td>
+			<td id="cs-url"></td>
+		<tr>
+		<tr>
+			<td>Version:</td>
+			<td id="cs-version"></td>
+		<tr>
+		<tr>
+			<td>Name</td>
+			<td id="cs-name"></td>
+		<tr>
+		<tr>
+			<td>Title:</td>
+			<td id="cs-title"></td>
+		<tr>
+		<tr>
+			<td>Status:</td>
+			<td id="cs-status"></td>
+		<tr>
+		<tr>
+			<td>Definition:</td>
+			<td id="cs-description"></td>
+		<tr>
+		<tr>
+			<td>Source Resource:</td>
+			<td id="cs-source-resource"></td>
+		<tr>
+	</table>
+	<h2>Content</h2>
+	<p>This code system <a href="" target="blank" id="cs-url"></a> defines the following codes:</p>
+	<form id="mass" name="mass" style="text-align: center">
+		<table id="cs-content">
 			<tr>
-				<td>Defining URL:</td>
-				<td id="cs-url"></td>
-			<tr>
-			<tr>
-				<td>Version:</td>
-				<td id="cs-version"></td>
-			<tr>
-			<tr>
-				<td>Name</td>
-				<td id="cs-name"></td>
-			<tr>
-			<tr>
-				<td>Title:</td>
-				<td id="cs-title"></td>
-			<tr>
-			<tr>
-				<td>Status:</td>
-				<td id="cs-status"></td>
-			<tr>
-			<tr>
-				<td>Definition:</td>
-				<td id="cs-description"></td>
-			<tr>
-			<tr>
-				<td>Source Resource:</td>
-				<td id="cs-source-resource"></td>
-			<tr>
+				<th>Code</th>
+				<th>Display</th>
+				<th>Definition</th>
+			</tr>
 		</table>
-	</div>
-	<div style="padding:20px" id="tableCodeSystem">
-		<h2>Content</h2>
-		<p>This code system <a href="" target="blank" id="cs-url"></a> defines the following codes:</p>
-		<form id="mass" name="mass" style="text-align: center">
-			<table align="center" id="cs-content">
-				<tr>
-					<th>Code</th>
-					<th>Display</th>
-					<th>Definition</th>
-				</tr>
-			</table>
-		</form>
-	</div>
-
+	</form>
 	<script>
-		function getResource(URL, ResourceName, Parameter, FHIRResponseType, AfterFun) {
-			//The complete URL to request data from FHIR Server
-			var url = URL + ResourceName + Parameter;
-			//Using XMLHttpRequest component to interact with the server
-			var xhttp = new XMLHttpRequest();
-			/*
-				xhttp.open(method, url, async)
-				@desc： Initialize components
-				@param： 
-					method： Using HTTP "GET" method
-					url： Request path
-					async： synchronously(false) or asynchronously(true)
-			*/
-			xhttp.open("GET", url, false);
-			/*
-				xhttp.setRequestHeader(header, value)
-				@desc： Set the value of the HTTP header
-				@param：
-					header： Header name
-					value： Header value
-			*/
-			xhttp.setRequestHeader("Content-type", 'text/' + FHIRResponseType);
-			/*
-				xhttp.onreadystatechange = callback;
-				@desc：Stores a function to be called automatically each time the readyState property changes
-			*/
-			xhttp.onreadystatechange = function () {
-				/*
-					this.readyState
-					@desc： Return the current status of the XMLHttpRequest
-					@value：
-						0: request not initialized
-						1: server connection established
-						2: request received (can obtained header & status)
-						3: processing request
-						4: request finished and response is ready
-				*/
-				/*
-					this.status
-					@desc：HTTP status messages that might be returned
-					@value：
-						0：UNSENT or OPENED
-						200：LOADING or DONE
-						403:FORBIDDEN
-						404:PAGE NOT FOUND
-				*/
-				if (this.readyState == 4 && (this.status == 200 || this.status == 201)) {
-					var str = this.response;
-					/*
-						eval(string)
-						@desc： Convert string to JavaScript function code for execution
-					*/
-					if (AfterFun != '') {
-						eval(AfterFun)(str);
-					}
-					return str;
-				}
-				else if (this.readyState == 4 && (this.status != 200 || this.status != 201)) {
-					retValue(JSON.parse(this.response));
-				}
-			};
-			/*
-				xhttp.send()
-				@desc： Send a request to the specified server path
-			*/
-			xhttp.send();
-		}
 		getResource(FHIRServer, "CodeSystem", "/misac.codesystem.bodysite", FHIRResponseType, 'displayCodeSystem');
 		function displayCodeSystem(responseStr) {
 			var CodeSystem = JSON.parse(responseStr);
