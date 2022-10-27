@@ -84,7 +84,7 @@
 			document.getElementById("cs-title").innerHTML = CodeSystem.title;
 			document.getElementById("cs-status").innerHTML = CodeSystem.status;
 			document.getElementById("cs-description").innerHTML = CodeSystem.description;
-			document.getElementById("cs-source-resource").innerHTML = " <a href='" + FHIRServer, "CodeSystem", "/misac.codesystem.bodysite" + "'>json</a> | <a href='" + excell_url + "'>excell</a>";
+			document.getElementById("cs-source-resource").innerHTML = " <a href='" + FHIRServer+ "CodeSystem/misac.codesystem.bodysite" + "'>json</a> | <a href='" + excell_url + "'>excell</a>";
 
 			var table = document.getElementById("cs-content");
 			for (var i = 0; i < CodeSystem.count; i++) {
