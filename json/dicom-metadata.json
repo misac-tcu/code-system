@@ -1,0 +1,47 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "misac.codesystem.dicommetadata",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-10-29T01:39:24.732+08:00"
+    },
+    "url": "https://misac-tcu.github.io/code-system/dicom-metadata.html",
+    "identifier": [
+        {
+            "system": "https://misac-tcu.github.io/code-system/annotation-type.html",
+            "value": "dicom-metadata"
+        }
+    ],
+    "version": "0.1.0",
+    "name": "dicom-metadata",
+    "title": "Code system for dicom-metadata",
+    "status": "draft",
+    "date": "2022-10-29T00:00:00+11:00",
+    "publisher": "Medical Informatics Standard Application Consortium (MISAC)",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "https://misac-tcu.github.io/contact-us"
+                }
+            ]
+        }
+    ],
+    "description": "Dicom metadata defines information on a single dicom image, containing information about the patient, acquisition parameters for the imaging study, parameters for displaying images, and image data.",
+    "caseSensitive": true,
+    "content": "complete",
+    "count": 2,
+    "concept": [
+        {
+            "code": "window.width",
+            "display": "Window Width",
+            "definition": "Window width define the width of the window information."
+        },
+        {
+            "code": "window.center",
+            "display": "Window Center",
+            "definition": "Window center define the center of the window information."
+        }
+    ]
+}
